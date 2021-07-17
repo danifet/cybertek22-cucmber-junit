@@ -1,7 +1,11 @@
 Feature: Google search functionality
-  rgtdrfgdfg
+
 
   Scenario: User search title verification
+
+  Scenario: Search page title verification
+    Given User is on Google Home Page
+    Then  User should see title is Google
 
     Given User is on Google Home Page
     When User searches for apple

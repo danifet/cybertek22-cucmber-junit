@@ -15,6 +15,14 @@ public class Google_StepDefinitions {
         Driver.getDriver().get("https://www.google.com");
     }
 
+    @Then("User should see title is Google")
+    public void user_should_see_title_is_google() {
+    String actualTitle = Driver.getDriver().getTitle();
+    String expectedTitle = "Google";
+
+    Assert.assertTrue(actualTitle.equals(expectedTitle));
+    }
+
     @When("User searches for apple")
     public void user_searches_for_apple() {
         GoogleSearchPage googleSearchPage = new GoogleSearchPage();
